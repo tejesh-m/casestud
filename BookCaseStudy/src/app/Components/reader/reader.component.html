@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<br>
+<body>
+    
+    <br>
+    <div style="text-align: center; border-style: groove;">
+            <label style="text-align: center; font-size: x-large;"> Search Books</label>
+            <br><br>
+            <table align="center" style="padding: 10px;">
+                <tr>
+                    <td>
+                        <label for="title" style="margin-right: 200px;">Title </label> 
+                    </td>
+                    <td> <input type="text" [(ngModel)]="book.title" placeholder="Enter title" id="title" />  </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <label for="author"  style="margin-right: 192px;">Author </label>
+                    </td>
+                    <td> <input type="text" [(ngModel)]="book.author" placeholder="Enter author name" id="author" />  </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <label for="publisher"  style="margin-right: 180px;">Publisher </label>
+                    </td>
+                    <td> <input type="text" [(ngModel)]="book.publisher" placeholder="Enter publisher" id="publisher" />  </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        <label for="publisheddate"  style="margin-right: 150px;">Released Date </label>
+                    </td>
+                    <td> <input type="text" [(ngModel)]="book.publisheddate" placeholder="Enter released date" id="publisheddate" />  </td>
+                </tr>
+
+            </table>
+            <label style="margin-left: 520px;"> <button (click)="searchBook()" class="btn btn-primary" type="submit">Search</button> </label>
+            <br> <br>
+    </div>
+    <br>
+    <div>
+        <table style="margin-left: 100px;">
+            <thead>
+                <th>Title</th>&nbsp;&nbsp;&nbsp;
+                <th>category</th>&nbsp;&nbsp;&nbsp;
+                <th>Price</th>&nbsp;&nbsp;&nbsp;
+                <th>Author</th>&nbsp;&nbsp;&nbsp;
+                <th>Publisher</th>&nbsp;&nbsp;&nbsp;
+                <th>Publisheddate</th>&nbsp;&nbsp;&nbsp;
+                <th>Chapters</th>&nbsp;&nbsp;&nbsp;
+                <th>Active</th>&nbsp;&nbsp;&nbsp;
+            </thead>
+            <tbody>
+                <tr *ngFor='let b of books, index as i'> 
+                <td> {{b.title}}</td>&nbsp;&nbsp;&nbsp;
+                <td> {{b.category}}</td>&nbsp;&nbsp;&nbsp;
+                <td> {{b.price}}</td>&nbsp;&nbsp;&nbsp;
+                <td> {{b.author}}</td>&nbsp;&nbsp;&nbsp;
+                <td> {{b.publisher}}</td>&nbsp;&nbsp;&nbsp;
+                <td> {{b.publisheddate}}</td>&nbsp;&nbsp;&nbsp;
+                <td> {{b.chapters}}</td>&nbsp;&nbsp;&nbsp;
+                <td> {{b.active}}</td>&nbsp;&nbsp;&nbsp;
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

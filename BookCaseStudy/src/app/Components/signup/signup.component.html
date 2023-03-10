@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+<br><br>
+<body>
+    <div style="text-align: center; font-size: xx-large;">
+        Sign Up
+    </div>
+    <br>
+    <div>
+        <table align="center">
+
+            <tbody> 
+                <tr>
+                    <td> 
+                        <label for="name">Name: </label></td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td> <input [(ngModel)]= reader.name  type="text" placeholder="Enter name" id="name" name="name"  />  </td>
+                </tr>
+                <br>
+                <tr>
+                    <td> 
+                        <label for="remailid">Email id: </label></td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td> <input [(ngModel)]= reader.remailid  placeholder="Enter email" type="text" id="remailid" name="remailid" required />  </td>
+                </tr>
+                <br>
+                <tr>
+                    <td> 
+                        <label for="rpassword">Password:</label></td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td> <input [(ngModel)]= reader.rpassword  placeholder="Enter password" type="password" id="rpassword" name="rpassword" />  </td>
+                </tr>
+                <br>
+        </table>
+    </div>
+    
+        <div style="margin-left: 850px;">
+            <button (click)="saveReader()"  class="btn btn-primary" type="submit" >Signup</button>
+        </div>
+    
+</body>
+</html>

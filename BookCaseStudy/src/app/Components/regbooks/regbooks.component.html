@@ -1,0 +1,32 @@
+<html>
+<body style="background-color: seashell;">
+    <br><br>
+<ul class="list-group">
+    <li *ngFor="let b of books; index as i" class="list-group-item">
+
+       
+        <span>
+            
+            <th> {{b.title}} </th>
+            
+        </span>
+        <span>
+           &nbsp;&nbsp;&nbsp;&nbsp; Category: <th> {{b.category}} </th> 
+        </span>
+        <span>
+            &nbsp;&nbsp;&nbsp;&nbsp; Price: <th> {{b.price | currency:'EUR'}} </th>
+        </span>
+        <span>
+            &nbsp;&nbsp;&nbsp;&nbsp; Author: <th> {{b.author}} </th>
+        </span>
+        <span>
+            &nbsp;&nbsp;&nbsp;&nbsp; PublishedDate: <th> {{b.publisheddate}} </th> 
+        </span>
+        <span>
+            <button style="margin-left: 1300px; background-color: red;" 
+            type="button" (click)="deleteRow(b, i)" class="btn-close" aria-label="Close"></button>
+        </span>
+    </li>
+  </ul>
+</body>
+  </html>
